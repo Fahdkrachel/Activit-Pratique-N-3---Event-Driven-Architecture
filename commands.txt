@@ -1,0 +1,6 @@
+== Docker
+> docker compose up -d
+> docker exec -it broker kafka-topics --bootstrap-server broker:29092 --list
+> docker exec -it broker kafka-console-producer --bootstrap-server broker:29092 --topic T2
+> docker exec -it broker kafka-console-consumer --bootstrap-server broker:29092 --topic T3
+> docker exec -it broker kafka-console-consumer --bootstrap-server broker:29092 --topic T4 --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
